@@ -9,22 +9,11 @@ const saergeRouter = require("./routes/products/saerge");
 const path = require('path');
 
 
-
+/*
 app.get('/', function(req, res) {
      res.sendFile(path.join(__dirname + '/index.html'));
  });
-
-
-
- function ignoreFavicon(req, res, next) {
-     if (req.originalUrl === '/favicon.ico') {
-       res.status(204).json({nope: true});
-     } else {
-       next();
-     }
-   }
-
-   app.use(ignoreFavicon);
+*/
 
 
 app.use("/saerge", saergeRouter);
