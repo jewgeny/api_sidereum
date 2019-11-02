@@ -9,9 +9,7 @@ const connectToDB = async () => {
         {useNewUrlParser: true, useUnifiedTopology: true});
         console.log("Connected to Atlas");
      }
-     catch(error){
-         console.warn(error)
-     }
+     catch(error){ 
 }
 
 module.exports = connectToDB;
