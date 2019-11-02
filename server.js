@@ -6,7 +6,9 @@ const dotenf = require("dotenv").config();
 const port = process.env.PORT || 4000;
 const connectToDB = require("./middlewares/connectToDB");
 const saergeRouter = require("./routes/products/saerge");
-var path = require('path');
+const path = require('path');
+
+
 
 app.get('/', function(req, res) {
      res.sendFile(path.join(__dirname + '/index.html'));
