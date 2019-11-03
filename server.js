@@ -9,27 +9,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const allowedOrigins = [
-     'https://sidereumapi2.herokuapp.com'
-   ];
-   
-   // Reflect the origin if it's in the allowed list or not defined (cURL, Postman, etc.)
-   const corsOptions = {
-     origin: (origin, callback) => {
-       if (allowedOrigins.includes(origin) || !origin) {
-         callback(null, true);
-       } else {
-         callback(new Error('Origin not allowed by CORS'));
-       }
-     }
-   }
-   
-   // Enable preflight requests for all routes
-   app.options('*', cors(corsOptions));
-   
-   app.get('/', cors(corsOptions), (req, res, next) => {
-     res.json({ message: 'This route is CORS-enabled for an allowed origin.' });
-   })
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
