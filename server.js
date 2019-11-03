@@ -10,11 +10,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const allowedOrigins = [
-     'capacitor://localhost',
-     'ionic://localhost',
-     'http://localhost',
-     'http://localhost:8080',
-     'http://localhost:8100',
      'https://sidereumapi2.herokuapp.com'
    ];
    
