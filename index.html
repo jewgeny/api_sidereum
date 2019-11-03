@@ -9,5 +9,20 @@
 </head>
 <body>
      <h1>Hello world</h1>
+
+<script>
+    console.log("hello world");
+    fetch("/saerge/get")
+     .then((resp) => {
+         console.log(resp)
+        return resp.json()
+    })
+    .then((data) => {
+        console.log("data", data)
+    })
+    .catch((error) =>{
+    console.log(error)
+  });  
+</script>
 </body>
 </html>
