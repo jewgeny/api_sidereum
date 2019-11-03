@@ -4,6 +4,7 @@ const getSaerge = async (req, res) => {
   try{
     const findAllSaerge = await sargeModel.find();
     res.status(202).json(findAllSaerge);
+    console.log("find all särge", findAllSaerge)
   }
   catch(error){
       console.warn(error)
