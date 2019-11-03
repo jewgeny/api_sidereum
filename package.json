@@ -5,10 +5,12 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.7.7"
+    "mongoose": "^5.7.7",
+    "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "node server"
+    "start": "node server",
+    "build": "node server build"
   },
   "browserslist": {
     "production": [
