@@ -14,6 +14,7 @@ const getSaerge = async (req, res) => {
 const createSaerge = async (req, res) => {
      try{
          await sargeModel.create({
+               img: req.body.img,
                titel: req.body.titel,
                price: req.body.price,
                category: req.body.category
