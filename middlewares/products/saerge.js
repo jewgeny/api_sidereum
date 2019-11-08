@@ -19,7 +19,8 @@ const createSaerge = async (req, res) => {
                img: req.body.img,
                titel: req.body.titel,
                price: req.body.price,
-               category: req.body.category
+               category: req.body.category,
+               art_nr: req.body.art_nr
          })
          res.status(202).json({msg: "Sarg wurde erfolgreich hinzugefügt"});
 

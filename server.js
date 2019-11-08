@@ -20,7 +20,6 @@ app.get('/', function(req, res) {
  });
 
 
-
 app.use("/saerge", saergeRouter);
 
 connectToDB();
