@@ -13,6 +13,17 @@ const getSaerge = async (req, res) => {
   }  
 }
 
+const deleteSarg = async(req, res) => {
+   try{
+      //await sargeModel.deleteOne({art_nr: req.body.art_nr});
+      await sargeModel.findByIdAndRemove(req.body._id);
+      res.status(202).json({msg: "Sarg wurde erfolgreich gelöscht"})
+   }
+   catch(error){
+     console.log(error)
+   }
+}
+
 const createSaerge = async (req, res) => {
      try{
          await sargeModel.create({
@@ -32,4 +43,4 @@ const createSaerge = async (req, res) => {
 
 
 
-module.exports = {getSaerge, createSaerge}
+module.exports = {getSaerge, createSaerge, deleteSarg}
