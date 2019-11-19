@@ -1,10 +1,4 @@
 const sargeModel = require("../../models/products/saerge");
-const multer = require("multer"); //for upload file
-const GridFsStorage = require("multer-gridfs-storage"); //for connecting to mongoDB
-const Grid = require("gridfs-stream"); //Easily stream files to and from MongoDB GridFS
-const path = require("path"); //path
-const crypto = require("crypto");
-const url = process.env.MONGO_DB;
 //const methodOverride = require("method-override");
 
 
@@ -31,27 +25,6 @@ const deleteSarg = async(req, res) => {
    }
 }
 
-
-
-var storage = new GridFsStorage({
-  url: sargeModel,
-  file: (req, file) => {
-    return new Promise((resolve, reject) => {
-      crypto.randomBytes(16, (err, buf) => {
-        if (err) {
-          return reject(err);
-        }
-        const filename = buf.toString('hex') + path.extname(file.originalname);
-        const fileInfo = {
-          filename: filename,
-          bucketName: 'uploads'
-        };
-        resolve(fileInfo);
-      });
-    });
-  }
-});
-const upload = multer({ storage });
 
 
 const createSaerge = async (req, res) => {
