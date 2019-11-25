@@ -6,6 +6,7 @@ const productSaerge = new mongoose.Schema({
     price: {type: Number, required: false},
     category: {type: String, required: false},
     art_nr: {type: String, required: false},
+    type: {type: String, required: false}
    
 }, {versionKey: false})
 

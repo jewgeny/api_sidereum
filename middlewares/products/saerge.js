@@ -35,7 +35,8 @@ const createSaerge = async (req, res) => {
                titel: req.body.titel,
                price: req.body.price,
                category: req.body.category,
-               art_nr: req.body.art_nr
+               art_nr: req.body.art_nr,
+               type: req.body.type
          })
          res.status(202).json({msg: "Sarg wurde erfolgreich hinzugefügt"});
 
